@@ -1,0 +1,24 @@
+.container {
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.logo {
+  font-size: 2em;
+  color: #000000;
+  margin-right: 100px;
+}
+
+.headlineLink {
+  text-decoration: none;
+  color: #000000;
+}
+
+.headlineLink:hover {
+  color: #0a375e;
+}
+
+h1 {
+  margin: 0;
+}

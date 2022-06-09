@@ -1,0 +1,25 @@
+.searchBar {
+  width: 100%;
+  border: solid gray 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  margin: 10px 0 ;
+}
+
+.mainSearch {
+  font-size: 1.8em;
+  border-width: 0;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  width: 100%;
+}
+
+.btnMainSearch {
+  font-size: 1.5em;
+  background: white;
+  border: none;
+  margin-right: 5px;
+  width: 30px;
+}

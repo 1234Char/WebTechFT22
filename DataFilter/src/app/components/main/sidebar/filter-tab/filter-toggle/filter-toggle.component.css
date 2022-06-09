@@ -1,0 +1,25 @@
+.container {
+  box-sizing: border-box;
+}
+
+.categorySearch {
+  display: flex;
+  width: 100%;
+  background-color: white;
+}
+
+.searchButton {
+  border: none;
+  background-color: white;
+}
+
+.categoryInput {
+  width: 100%;
+  margin-right: 5px;
+  border: none;
+}
+
+
+
+
+

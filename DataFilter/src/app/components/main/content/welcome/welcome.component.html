@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Willkommen</h2>
+  <div class="standardText">Wir begrüßen Sie auf dieser Seite</div>
+  <div class="searchBar">
+    <input type="text" (keyup)="handleInput($event)" class="mainSearch" placeholder="Suchbegriff eingeben">
+    <button class="btnMainSearch" routerLink="/results"> <fa-icon [icon]="faSearch"></fa-icon></button>
+    <button class="btnMainSearch"><fa-icon [icon]="delete"></fa-icon></button>
+
+
+  </div>
+</div>
+

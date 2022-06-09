@@ -1,0 +1,16 @@
+<div class="container">
+  <form class="categorySearch">
+    <input (keyup)="getInput($event)" alt="{{category}} suchen" class="categoryInput standardText"
+           placeholder="{{category}} suchen" type="text">
+    <button class="searchButton standardText" routerLink="results">
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </button>
+  </form>
+  <div class="toggleContainer">
+
+    <div *ngFor="let statistic of stats" class="toggleOption">
+      <app-toggle-entry category="{{category}}" [label]="statistic.sLabel" [count]="statistic.sCount"></app-toggle-entry>
+    </div>
+  </div>
+</div>
+
