@@ -1,0 +1,8 @@
+<button (click)="toggleOption($event)" class="container standardText">
+  <div class="icon">
+    <fa-icon *ngIf="selected" [icon]="selIcon"></fa-icon>
+    <fa-icon *ngIf="!selected" [icon]="nSelIcon"></fa-icon>
+  </div>
+  <label class="standardText optionName">{{label}}</label>
+  <label class="standardText optionCount">{{count}}</label>
+</button>

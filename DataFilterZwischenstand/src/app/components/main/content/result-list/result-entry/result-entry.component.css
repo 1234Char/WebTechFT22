@@ -1,0 +1,28 @@
+.container {
+  background-color: lightsteelblue;
+  padding: 10px;
+  margin: 5px;
+}
+
+.rTitle {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.rAuthor {
+  text-decoration: underline;
+}
+
+.rShort{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  color: gray;
+}
+

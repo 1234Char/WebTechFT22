@@ -1,14 +1,25 @@
-<div class="container standardText">
-  <div id="filterFunction" >
-    <div class="containOptions">
-      <mat-slide-toggle (click)="toggleAllOptions()"></mat-slide-toggle>
-      Alle Optionen müssen enthalten sein.
+<div class="container ">
+  <div>
+
+    <div id="filterFunction">
+
+
+      <!-- <button (click)="toggleAllOptions()" class="containOptions standardText">
+         <fa-icon *ngIf="allOptions" [icon]="faSel" class="icon"></fa-icon>
+         <fa-icon *ngIf="!allOptions" [icon]="faNotSel" class="icon"></fa-icon>
+         <span>
+            Alle Optionen müssen enthalten sein.
+         </span>
+
+       </button>-->
+      <div id="filterTabs">
+        <app-filter-tab category="Autor"></app-filter-tab>
+        <app-filter-tab category="Thema"></app-filter-tab>
+        <app-filter-tab category="Dateianhang"></app-filter-tab>
+        <app-filter-tab category="Jahr"></app-filter-tab>
+      </div>
     </div>
-    <div id="filterTabs">
-      <app-filter-tab category="Autor"></app-filter-tab>
-      <app-filter-tab category="Dateianhang"></app-filter-tab>
-      <app-filter-tab category="Jahr"></app-filter-tab>
-    </div>
+
   </div>
 
 

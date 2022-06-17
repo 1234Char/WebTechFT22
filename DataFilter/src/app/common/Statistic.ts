@@ -3,7 +3,7 @@ export interface Statistic {
   sCount: number;
 }
 
-export class StatisticEntry implements Statistic{
+export class StatisticEntry implements Statistic {
   sLabel: string;
   sCount: number;
 

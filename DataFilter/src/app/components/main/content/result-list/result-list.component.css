@@ -1,0 +1,34 @@
+
+.bottomNav {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 10%;
+  grid-template-columns: 80% 20%;
+}
+
+app-page-nav {
+  grid-column: 1/2;
+}
+
+.scrollToTop {
+  grid-column: 2/3;
+  align-self: center;
+}
+
+.scrollToTopBtn {
+  background: white;
+  border: none;
+  box-shadow: none;
+
+}
+
+
+
+
+
+
+
+
+
+

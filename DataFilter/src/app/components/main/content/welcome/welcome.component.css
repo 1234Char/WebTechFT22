@@ -4,11 +4,15 @@
   border-radius: 5px;
   box-sizing: border-box;
   display: flex;
-  margin: 10px 0 ;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 .mainSearch {
-  font-size: 1.8em;
+  font-size: 1.2em;
   border-width: 0;
   border-radius: 5px;
   padding: 5px;
@@ -17,6 +21,14 @@
 }
 
 .btnMainSearch {
+  font-size: 1.2em;
+  background: white;
+  border: none;
+  margin-right: 5px;
+  width: 30px;
+}
+
+.btnMainDel {
   font-size: 1.5em;
   background: white;
   border: none;

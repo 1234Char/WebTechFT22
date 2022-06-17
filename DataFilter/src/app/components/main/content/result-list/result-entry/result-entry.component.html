@@ -1,9 +1,37 @@
-<div class="container standardText" >
-  <div >
-    <a routerLink="/article" class="rTitle" (click)="setCurrentArticle(result)">{{result.rTitle}}</a></div>
-  <div class="rAuthor">{{result.rAuthor}}</div>
-  <div class="rYear">{{result.rYear}}</div>
-  <div class="rShort">{{result.rShort}}</div>
+<div class="container ">
+  <button (click)="toggleCompletelyShow(); setCurrentArticle(result)" class="btnShowFullResult ">
+    <span class="entryHeadline ">
+      <span class="rTitle standardText">{{result.rTitle}}</span>
+      <span class="dropdownAngle standardText">
+        <fa-icon *ngIf="showFullResult" [icon]="faAngleUp"></fa-icon>
+        <fa-icon *ngIf="!showFullResult" [icon]="faAngleDown"></fa-icon>
+      </span>
+    </span>
+    <span class="entryDetails ">
+      <span class="rAuthor standardText">{{result.rAuthor}}</span>
+      <span class="rYear standardText">{{result.rYear}}</span>
+    </span>
+  </button>
+
+  <div *ngIf="showFullResult" class="completeResult">
+    <div class="shortHeadline standardText">Zusammenfassung</div>
+    <div *ngIf="hasShort" class="rShort ">{{result.rShort}}</div>
+    <div *ngIf="!hasShort" class="rShort dummyEntry">{{result.rShort}}</div>
+    <form action="{{result.rDSpaceLink}}" method="get" target="_blank">
+      <button type="submit">
+        <span class="btnContent standardText">
+          Verweis auf den DSpace Server (extern)
+        <fa-icon [icon]="faExtern"></fa-icon>
+        </span>
+      </button>
+    </form>
+    <div *ngIf="hasFile" class="fileLink">
+      Dieses Dokument besitzt eine angehängte Datei, auf welche über die externe DSpace Server Seite zugegriffen werden
+      kann.
+    </div>
+  </div>
+
+
 </div>
 
 

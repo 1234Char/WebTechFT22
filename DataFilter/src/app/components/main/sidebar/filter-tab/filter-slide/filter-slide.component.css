@@ -17,30 +17,35 @@
 
 @media (min-width: 700px) and (max-width: 800px) {
   .filter-search{
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
 }
 
-.filter-search-text{
+.filter-search-text {
   padding: 5px;
 }
 
-.btnSubmit{
-width: 100%;
+.btnSubmit {
+  width: 100%;
 }
 
 
-/*Slider for selection*/
+/*Slider for selection from ngx module*/
+
+/*Slider bar background*/
 /deep/ .slider .ngx-slider .ngx-slider-bar {
   background: #9d9d9d;
   height: 2px;
 }
+
+/*Slider bar foreground*/
 /deep/ .slider .ngx-slider .ngx-slider-selection {
   background: #0a375f;
   height: 4px;
-  top:15px;
+  top: 15px;
 }
 
+/*Slider bar handles*/
 /deep/ .slider .ngx-slider .ngx-slider-pointer {
   width: 16px;
   height: 16px;
@@ -48,27 +53,23 @@ width: 100%;
   background-color: #0a375e;
 }
 
+/*Slider bar handles after*/
 /deep/ .slider .ngx-slider .ngx-slider-pointer:after {
   display: none;
 }
 
+/*Numbers over handles*/
 /deep/ .slider .ngx-slider .ngx-slider-bubble {
   bottom: 14px;
+  color: #0a375f;
+  font-size: 1.2em;
 }
 
-/deep/ .slider .ngx-slider .ngx-slider-limit {
-  color: #0a375e;
+/*Floor and ceiling value*/
+/deep/ .slider .ngx-slider .ngx-slider-bubble.ngx-slider-limit {
+  bottom: 14px;
+  color: #0a375f;
+  font-size: 1.2em;
 }
 
-/deep/ .slider .ngx-slider .ngx-slider-tick {
-  width: 1px;
-  height: 10px;
-  margin-left: 4px;
-  border-radius: 0;
-  background: #ffe4d1;
-  top: -1px;
-}
 
-/deep/ .slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
-  background: #0a375e;
-}

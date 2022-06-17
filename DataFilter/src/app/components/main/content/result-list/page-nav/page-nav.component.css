@@ -1,0 +1,55 @@
+.container {
+  box-sizing: border-box;
+  padding-left: 5px;
+}
+
+ul {
+  display: flex;
+
+  list-style-type: none;
+  padding: 0;
+  /*
+    background: #b0c4de;
+    border-radius: 2px;*/
+
+}
+
+button {
+  font-size: 1.1em;
+  padding: 5px 15px;
+  border: none;
+  box-shadow: none;
+  border-radius: 3px;
+  margin-right: 2px;
+}
+
+.btnPageActive {
+  background: #4682b4;
+  font-weight: bold;
+}
+
+.btnPageNonActive {
+  background: #b0c4de;
+}
+
+.navigate {
+  background: white;
+  padding: 5px;
+  border: none;
+  box-shadow: none;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+
+.navigateText {
+  display: contents;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .navigateText {
+    display: none;
+  }
+
+}

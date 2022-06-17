@@ -7,12 +7,13 @@ app-main{
   grid-column: 2/3;
 }
 
-@media only screen and (max-width:1000px)  {
-  main{
+@media only screen and (max-width: 1200px) {
+  main {
     display: grid;
     grid-template-columns: 100%;
   }
-  app-main{
+
+  app-main {
     grid-column: 1/2;
   }
 

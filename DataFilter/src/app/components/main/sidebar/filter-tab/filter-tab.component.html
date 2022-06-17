@@ -1,7 +1,7 @@
 <div class="container">
-  <button class="filterTabHeader" (click)="toggleView()">
-    <span class="categoryTitle">{{category}}</span>
-    <span class="dropdownAngle">
+  <button (click)="toggleView()" class="filterTabHeader ">
+    <span class="categoryTitle ">{{category}}</span>
+    <span class="dropdownAngle ">
       <fa-icon *ngIf="isVisible" [icon]="faAngleUp"></fa-icon>
       <fa-icon *ngIf="!isVisible" [icon]="faAngleDown"></fa-icon>
     </span>

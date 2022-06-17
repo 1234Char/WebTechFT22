@@ -1,0 +1,48 @@
+<div class="container">
+
+
+  <ul>
+    <!--In den Seiten zurück-->
+    <button (click)="jumpToFist()" *ngIf="pageNum>1" class="navigate">
+      <fa-icon [icon]="faFirst"></fa-icon>
+      <span class="navigateText">
+      Erste
+    </span>
+    </button>
+
+    <button (click)="prevPage()" *ngIf="pageNum>1" class="navigate">
+      <fa-icon [icon]="faPrev"></fa-icon>
+      <span class="navigateText">
+        Zurück
+      </span>
+    </button>
+
+    <!--Seitenzahlen-->
+    <li *ngFor="let i of pageNumbers">
+      <button *ngIf="pageNum===i" class="btnPageActive">
+        {{i}}
+      </button>
+      <button (click)="changePageTo(i-1)" *ngIf="pageNum!==i" class="btnPageNonActive">
+        {{i}}
+      </button>
+    </li>
+
+    <!--In den Seiten vorwärts-->
+
+    <button *ngIf="pageNum<totalPages" class="navigate">
+      <span (click)="nextPage()" class="navigateText">
+        Weiter
+      </span>
+      <fa-icon [icon]="faNext"></fa-icon>
+    </button>
+
+    <button *ngIf="pageNum<totalPages" class="navigate">
+      <span (click)="jumpToLast()" class="navigateText">
+        Letzte
+      </span>
+      <fa-icon [icon]="faLast"></fa-icon>
+    </button>
+  </ul>
+
+
+</div>

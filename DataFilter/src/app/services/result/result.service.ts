@@ -9,34 +9,35 @@ import {Objects} from "../../common/Objects";
   providedIn: 'root'
 })
 export class ResultService {
-  apiUrl: string = 'https://webtech.informatik.unibw-muenchen.de/server/#/server/api';
-  objectUrl: string='https://webtech.informatik.unibw-muenchen.de/server/api/discover/search';
-  testUrl: string = 'http://localhost:4200/assets/dbContent.json'
+  objectUrl: string = 'https://webtech.informatik.unibw-muenchen.de/server/api/discover/search';
   results: Result[] = [];
 
   constructor(private http: HttpClient) {
   }
 
 
-  getResponceObjects(parameter : string): Observable<Objects> {
-    console.log((`${this.objectUrl}/objects${parameter}`))
-    return this.http.get<any>(`${this.objectUrl}/objects${parameter}`);
+  getResponceObjects(parameter: string): Observable<Objects> {
+
+    let search = `${this.objectUrl}/objects${parameter}`;
+    console.log(search);
+    return this.http.get<any>(search);
+
+
   }
 
-  search(): void{
-    if(GlobalConstants.allOptions){
+  search(): void {
+    if (GlobalConstants.allOptions) {
       this.searchContainingAll();
-    }else{
+    } else {
       this.searchContainingSome();
     }
-    this.http.get<Result[]>(this.testUrl)
   }
 
-  searchContainingAll(): void{
+  searchContainingAll(): void {
 
   }
 
-  searchContainingSome(): void{
+  searchContainingSome(): void {
 
   }
 }

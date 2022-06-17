@@ -1,28 +1,81 @@
 .container {
   background-color: lightsteelblue;
+  box-sizing: border-box;
   padding: 10px;
-  margin: 5px;
+  margin: 5px 5px 10px;
+}
+
+button {
+  background: lightsteelblue;
+  border: none;
+}
+
+.btnShowFullResult {
+  display: flow;
+  width: 100%;
+}
+
+.entryHeadline {
+  display: grid;
+  grid-template-columns: 95% 5%;
+  font-size: 1.4em;
 }
 
 .rTitle {
+  text-align: left;
   font-weight: bold;
-  text-decoration: none;
-  color: black;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+  width: 100%;
+}
+
+.dropdownAngle {
+  display: flex;
+  text-align: end;
+  padding-left: 3px;
+}
+
+.entryDetails {
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: 80% 15% 5%;
 }
 
 .rAuthor {
-  text-decoration: underline;
+  color: #0a375f;
+  text-align: left;
 }
 
-.rShort{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  color: gray;
+.completeResult {
+  border-top: solid 2px #0a375f;
+  padding-top: 5px;
+  margin: 4px;
+  display: flow;
+  width: 95%;
+
 }
+
+.rShort {
+  font-family: serif;
+  padding: 2px 7px 2px 2px;
+  font-size: 1.3em;
+  text-align: justify;
+  border: solid 1px #0a375f;
+  background: white;
+  margin: 5px;
+}
+
+.dummyEntry {
+  color: #3a3a3a;
+}
+
+.btnContent {
+  text-decoration: underline solid;
+  color: #0a375f;
+}
+
+
+
 

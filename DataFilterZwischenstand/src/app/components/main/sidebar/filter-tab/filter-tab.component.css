@@ -1,0 +1,27 @@
+.container {
+  background-color: lightsteelblue;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+.filterTabHeader {
+  background-color: lightsteelblue;
+  border: none;
+  display: flex;
+  width: 100%;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.categoryTitle {
+  display: flex;
+  width: 100%;
+  align-self: start;
+}
+
+.dropdownAngle {
+  display: flex;
+  align-self: end;
+}
+

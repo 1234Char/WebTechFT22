@@ -1,11 +1,22 @@
 import {Result} from "./Result";
-import {HttpParams} from "@angular/common/http";
 import {Statistic} from "./Statistic";
 
 export class GlobalConstants {
   static currentArticle: Result;
   static allOptions: boolean;
-  static authorOptions: Statistic[]=[];
-  static hasContentOptions: Statistic[]=[];
+  static authorOptions: Statistic[] = [];
+  static subjectOptions: Statistic[] = [];
+  static hasContentOptions: Statistic[] = [];
+
+  static lastSearch: string;
+
   static queryParams: string;
+  static pageParam: string = "&page=0";
+  static authorParam: string = "";
+  static subjectParam: string = "";
+  static hasContentParam: string = "";
+  static yearParam: string = "";
+  static freeMainParam: string = "";
+
+
 }

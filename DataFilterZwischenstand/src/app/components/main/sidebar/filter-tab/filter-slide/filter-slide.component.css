@@ -1,0 +1,74 @@
+.filter-search{
+  display: flex;
+  width: 100%;
+}
+
+#filter-search-min{
+  margin-right: 2px;
+}
+
+#filter-search-max{
+  margin-left: 2px;
+}
+
+.input-field{
+  width: 50%;
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  .filter-search{
+    font-size: 0.9em;
+  }
+}
+
+.filter-search-text{
+  padding: 5px;
+}
+
+.btnSubmit{
+width: 100%;
+}
+
+
+/*Slider for selection*/
+/deep/ .slider .ngx-slider .ngx-slider-bar {
+  background: #9d9d9d;
+  height: 2px;
+}
+/deep/ .slider .ngx-slider .ngx-slider-selection {
+  background: #0a375f;
+  height: 4px;
+  top:15px;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-pointer {
+  width: 16px;
+  height: 16px;
+  top: -8px;
+  background-color: #0a375e;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-pointer:after {
+  display: none;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-bubble {
+  bottom: 14px;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-limit {
+  color: #0a375e;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-tick {
+  width: 1px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0;
+  background: #ffe4d1;
+  top: -1px;
+}
+
+/deep/ .slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+  background: #0a375e;
+}

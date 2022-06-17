@@ -1,16 +1,26 @@
 <div class="container">
-  <form class="categorySearch">
-    <input (keyup)="getInput($event)" alt="{{category}} suchen" class="categoryInput standardText"
-           placeholder="{{category}} suchen" type="text">
-    <button class="searchButton standardText" routerLink="results">
-      <fa-icon [icon]="faSearch"></fa-icon>
-    </button>
-  </form>
-  <div class="toggleContainer">
-
-    <div *ngFor="let statistic of stats" class="toggleOption">
-      <app-toggle-entry category="{{category}}" [label]="statistic.sLabel" [count]="statistic.sCount"></app-toggle-entry>
+  <div *ngIf="gotResponse" class="gotResponseContainer">
+    <div (keyup)="submit($event)" *ngIf="category!=='Dateianhang'" class="categorySearch">
+      <input (keyup)="getInput($event)" alt="{{category}} suchen"
+             class="categoryInput standardText"
+             placeholder="{{category}} suchen" type="text">
+      <button (click)="lookFor()" class="searchButton standardText" type="button">
+        <!--routerLink="results"-->
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </button>
+    </div>
+    <div class="toggleContainer">
+      <div *ngFor="let statistic of stats| slice:0:5 " class="toggleOption">
+        <app-toggle-entry [count]="statistic.sCount" [label]="statistic.sLabel"
+                          category="{{category}}"></app-toggle-entry>
+      </div>
     </div>
   </div>
+  <div *ngIf="!gotResponse" class="noResponseContainer standardText">
+    Zur Zeit ist leider keine Filterung nach dem {{category}} möglich.
+
+  </div>
+
+
 </div>
 

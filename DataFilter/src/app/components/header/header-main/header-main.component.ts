@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {faBookOpen} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
@@ -7,7 +7,8 @@ import {faBookOpen} from "@fortawesome/free-solid-svg-icons";
   styleUrls: ['./header-main.component.css']
 })
 export class HeaderMainComponent implements OnInit {
-  faBook=faBookOpen;
+  @Input() title: string;
+  faBook = faBookOpen;
 
   constructor() { }
 

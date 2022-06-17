@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Options} from "@angular-slider/ngx-slider";
 import {faMinus} from "@fortawesome/free-solid-svg-icons";
+import {GlobalConstants} from "../../../../../common/GlobalConstants";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -10,22 +12,22 @@ import {faMinus} from "@fortawesome/free-solid-svg-icons";
 })
 export class FilterSlideComponent implements OnInit {
   @Input() category: string;
-  faMinus=faMinus;
-  anfrage: string= "https://webtech.informatik.unibw-muenchen.de/server/api/discover/search/objects?f.dateIssued=%5B2030%20TO%202045%5D,equals";
+  faMinus = faMinus;
 
-  minValueField: number=1000;
-  maxValueField: number=10000;
+  minValueField: number = 2000;
+  maxValueField: number = 2022;
 
   floorValue: number = 1900;
   ceilValue: number = 2030;
 
-  minValueSlider: number = 2000;
-  maxValueSlider: number = 2022;
+  minValueSlider: number = this.minValueField;
+  maxValueSlider: number = this.maxValueField;
   options: Options = {
     floor: this.floorValue,
     ceil: this.ceilValue
   }
-  constructor() {
+
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
@@ -64,7 +66,18 @@ export class FilterSlideComponent implements OnInit {
       this.maxValueField = this.ceilValue;
     }
 
-    this.minValueSlider=this.minValueField;
-    this.maxValueSlider=this.maxValueField;
+    this.minValueSlider = this.minValueField;
+    this.maxValueSlider = this.maxValueField;
+  }
+
+  addFilterOption() {
+    if (this.category === "Jahr") {
+      GlobalConstants.yearParam = `f.dateIssued=%5B${this.minValueField}%20TO%20${this.maxValueField}%5D,equals`;
+      this.search();
+    }
+  }
+
+  private search() {
+    this.router.navigate(["/query"]);
   }
 }

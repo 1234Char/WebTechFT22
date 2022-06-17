@@ -4,21 +4,24 @@ export interface Result{
   rAuthor: string,
   rYear: any,
   rShort: string,
-  rFull:string;
+  rDSpaceLink: string;
+  rFile: boolean
 }
 export class ResultEntry implements Result{
   rAuthor: string;
-  rFull: string;
+  rDSpaceLink: string;
   rShort: string;
   rTitle: string;
   rYear: any;
+  rFile: boolean;
 
 
-  constructor(rAuthor: string, rFull: string, rShort: string, rTitle: string, rYear: any) {
+  constructor(rAuthor: string, rDSpaceLink: string, rShort: string, rTitle: string, rYear: any, rFile: boolean) {
     this.rAuthor = rAuthor;
-    this.rFull = rFull;
+    this.rDSpaceLink = rDSpaceLink;
     this.rShort = rShort;
     this.rTitle = rTitle;
     this.rYear = rYear;
+    this.rFile = rFile;
   }
 }
