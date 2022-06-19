@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>{{resultCount}} Ergebnisse zu Ihrer Suche</h2>
+  <div *ngIf="resultCount===0" class="noResults">
+    <div class="standardText noResultText">
+      Bitte wiederholen Sie die Suche mit anderen Suchkriterien.
+      Beachten Sie: Es werden nur Ergebnisse angezeigt, die alle gewählten Filterkriterien erfüllen.
+    </div>
+    <button class="backToButton standardText" routerLink="/welcome">
+      Zur Startseite
+    </button>
+
+  </div>
+
+  <app-page-nav *ngIf="resultCount>0" [pageNum]="pageNumber" [totalPages]="totalPages"></app-page-nav>
+  <app-result-entry *ngFor="let result of results" [result]="result"></app-result-entry>
+  <div *ngIf="resultCount>0" class="bottomNav">
+    <app-page-nav [pageNum]="pageNumber" [totalPages]="totalPages"></app-page-nav>
+    <div class="scrollToTop">
+      <button (click)="scrollToTop()" class="backToButton standardText">
+        Zum Seitenanfang
+      </button>
+    </div>
+  </div>
+</div>

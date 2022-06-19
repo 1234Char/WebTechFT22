@@ -1,0 +1,17 @@
+<div class="container ">
+  <h2>Willkommen</h2>
+  <div class="standardText">Wir begrüßen Sie auf dieser Seite. Nutzen Sie bitte die Suchleiste um nach Titeln oder
+    Titelfragmenten zu suchen. Wortteile können leider nicht gefunden werden. Weitere Suchoptionen finden sich im
+    Filtermenü.
+  </div>
+  <form class="searchBar standardText">
+    <input (input)="handleInput($event)" class="mainSearch" placeholder="Schlagwort eingeben" type="text">
+    <button (click)="search()" class="btnMainSearch" type="submit">
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </button>
+    <button class="btnMainDel" type="reset">
+      <fa-icon [icon]="delete"></fa-icon>
+    </button>
+  </form>
+</div>
+

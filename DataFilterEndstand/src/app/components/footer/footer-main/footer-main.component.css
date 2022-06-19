@@ -1,0 +1,6 @@
+.container {
+  box-sizing: border-box;
+  background-color: steelblue;
+  text-align: center;
+  padding: 15px;
+}

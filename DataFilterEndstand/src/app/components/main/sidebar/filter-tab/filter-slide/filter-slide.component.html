@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="filter-search ">
+    <input (click)="inputMin($event)" (keyup)="inputMin($event)"
+           [value]="minValueSlider" class="input-field standardText" type="number">
+    <div class="filter-search-text">
+      <fa-icon [icon]="faMinus"></fa-icon>
+    </div>
+    <input (click)="inputMax($event)" (keyup)="inputMax($event)" [value]="maxValueSlider"
+           class="input-field standardText" type="number">
+
+  </div>
+  <div class="slider ">
+    <ngx-slider (click)="updateFieldValues()" [(highValue)]="maxValueSlider" [(value)]="minValueSlider"
+                [options]="options"></ngx-slider>
+  </div>
+  <button (click)="addFilterOption()" class="btnSubmit standardText" routerLink="/query" type="submit">Bestätigen
+  </button>
+</div>
+

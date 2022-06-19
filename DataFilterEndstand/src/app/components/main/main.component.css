@@ -1,0 +1,31 @@
+.container {
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 20% 80%;
+}
+
+app-content {
+  margin-right: 10px;
+}
+
+app-sidebar {
+  margin: 5px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 50% 80%;
+  }
+
+  app-sidebar {
+    grid-row: 2/3;
+  }
+
+  app-content {
+    grid-row: 3/4;
+  }
+}

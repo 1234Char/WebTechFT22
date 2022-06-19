@@ -1,0 +1,15 @@
+<div class="container">
+  <button (click)="toggleView()" class="filterTabHeader ">
+    <span class="categoryTitle ">{{category}}</span>
+    <span class="dropdownAngle ">
+      <fa-icon *ngIf="isVisible" [icon]="faAngleUp"></fa-icon>
+      <fa-icon *ngIf="!isVisible" [icon]="faAngleDown"></fa-icon>
+    </span>
+
+
+  </button>
+
+  <app-filter-toggle *ngIf="category!=='Jahr' && isVisible" category="{{category}}"></app-filter-toggle>
+  <app-filter-slide *ngIf="category==='Jahr' && isVisible" category="{{category}}"></app-filter-slide>
+
+</div>

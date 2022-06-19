@@ -1,0 +1,40 @@
+.bottomNav {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 10%;
+  grid-template-columns: 80% 20%;
+}
+
+.noResultText {
+  margin-bottom: 5px;
+}
+
+app-page-nav {
+  grid-column: 1/2;
+}
+
+.scrollToTop {
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: end;
+}
+
+.backToButton {
+  background: lightsteelblue;
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  padding: 2px;
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
