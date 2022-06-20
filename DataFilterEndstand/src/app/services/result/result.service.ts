@@ -18,7 +18,6 @@ export class ResultService {
   public getResponseObjects(parameter: string): Observable<Objects> {
 
     let search = `${this.objectUrl}/objects${parameter}`;
-    console.log(search);
     return this.http.get<any>(search);
   }
 }
